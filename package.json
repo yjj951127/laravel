@@ -1,0 +1,52 @@
+{
+    "private": true,
+    "scripts": {
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+
+        "dev-admim": "npm run development-admin",
+        "development-admin": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --env admin",
+        "watch-admin": "npm run development-admin -- --watch",
+        "watch-poll-admin": "npm run watch-admin -- --watch-poll",
+        "prod-admin": "npm run production-admin",
+        "production-admin": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --env admin",
+
+        "dev-home": "npm run development-home",
+        "development-home": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --env home",
+        "watch-home": "npm run development-home -- --watch",
+        "watch-poll-home": "npm run watch-home -- --watch-poll",
+        "prod-home": "npm run production-home",
+        "production-home": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --env home"
+
+
+    },
+    "devDependencies": {
+        "axios": "^0.19",
+        "browser-sync": "^2.26.7",
+        "browser-sync-webpack-plugin": "^2.0.1",
+        "cross-env": "^7.0",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.13",
+        "resolve-url-loader": "^3.1.0",
+        "vue": "^2.6.11",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@babel/plugin-transform-runtime": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "@vue/component-compiler-utils": "^3.1.2",
+        "acorn": "^7.3.1",
+        "ajv": "^6.12.3",
+        "cross-env": "^7.0.2",
+        "es6-promise": "^4.2.8",
+        "less": "^3.0.4",
+        "less-loader": "^5.0.0",
+        "minimist": "^1.2.5",
+        "shebang-command": "^2.0.0",
+        "view-design": "^4.3.1",
+        "vue-router": "^3.3.4",
+        "vue-video-player": "^5.0.2",
+        "vuex": "^3.5.1"
+    }
+}
